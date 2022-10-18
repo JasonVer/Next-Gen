@@ -7,14 +7,14 @@
 <body>  
     <div id = "frm">  
         <h1>Welcome!</h1>  
-        <form name="f1" onsubmit = "return validation()" >  
+        <form name="f1" method="POST" action="login.php" >  
             <p>  
                 <label> UserName: </label>  
-                <input type = "text" id ="user" name  = "user" />  
+                <input type = "text" id ="username" name  = "username" />  
             </p>  
             <p>  
                 <label> Password: </label>  
-                <input type = "password" id ="pass" name  = "pass" />  
+                <input type = "password" id ="password" name  = "password" />  
             </p>  
             <p>     
                 <a href="test.php">Register here</a>
