@@ -16,6 +16,7 @@ if ($agree != "yes"){
 if($password===$password2){}
 
 //database checken op entry,  equal stuurt terug
+//testing git commit
 
 
 
