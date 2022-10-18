@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
-    <h1>Register</h1>
-</body>
-</html>
+<?php
+print_r($_POST);
+$email=$_POST["email"];
+$username=$_POST["username"];
+$password=$_POST["password"];
+$password2=$_POST["password2"];
+$agree=$_POST["agree"];
+
+
+if ($agree != "yes"){
+    header('Location: ./test.php');
+
+
+}
+
+if($password===$password2){}
+
+//database checken op entry,  equal stuurt terug
+
+
+
+$hashedpassword = md5($password);
+echo($hashedpassword);
+
