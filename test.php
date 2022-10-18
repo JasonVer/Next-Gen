@@ -42,6 +42,19 @@
         <div>
         
         <input type="submit" />
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+   <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+        </div>
+        <div>
+        <button type="submit"
+        class="g-recaptcha" 
+        data-sitekey="6Lfi3WkiAAAAAJ6gOLZWHGiwhnD6Whz8UAamD1oT" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
         </div>
         <button type="submit">Register</button>
         <footer>Already a member? <a href="index.html">Login here</a></footer>
