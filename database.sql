@@ -11,24 +11,25 @@ CREATE TABLE users(
     bannerpic VARCHAR(32) 
 );
 
-CREATE TABLE feed(
-    feedid INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE posts(
+    postid INT PRIMARY KEY AUTO_INCREMENT,
     userid int,
     msg VARCHAR(255) ,
     pic VARCHAR(32),
     likes int,
-    dislikes int,
+    --dislikes int,
 
     FOREIGN KEY (userid) REFERENCES users(id)
 );
 
 CREATE TABLE comments(
     commentid INT PRIMARY KEY AUTO_INCREMENT,
-    feedid int,
+    postid int,
+    userid int,
     comment VARCHAR(255) ,
     likes int,
-    dislikes int,
-    FOREIGN KEY (feedid) REFERENCES feed(feedid)
+    --dislikes int,
+    FOREIGN KEY (postid) REFERENCES posts(postid)
 );
 
 
