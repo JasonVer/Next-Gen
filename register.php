@@ -27,4 +27,4 @@ if ($count[0] != "0")
 $hashedpassword = md5($password);
 $database->query("INSERT INTO users(username, mail, pwd) VALUES ('".$username."', '".$email."', '".$hashedpassword."');");
 
-header('Location: ./test.php');
+header('Location: ./index.html');
