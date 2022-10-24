@@ -1,6 +1,6 @@
-CREATE DATABASE SuckIt;
+CREATE DATABASE iamsocial;
 
-USE SuckIt;
+USE iamsocial;
 
 CREATE TABLE users(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -17,7 +17,7 @@ CREATE TABLE posts(
     msg VARCHAR(255) ,
     pic VARCHAR(32),
     likes int,
-    --dislikes int,
+    /*dislikes int,*/
 
     FOREIGN KEY (userid) REFERENCES users(id)
 );
@@ -28,7 +28,7 @@ CREATE TABLE comments(
     userid int,
     comment VARCHAR(255) ,
     likes int,
-    --dislikes int,
+    /*--dislikes int,*/
     FOREIGN KEY (postid) REFERENCES posts(postid)
 );
 

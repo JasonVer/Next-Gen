@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "./database.php";
 $username=$_POST["username"];
 $password=$_POST["password"];
@@ -12,3 +13,6 @@ var_dump($result);
 if(!$result){
     header('Location: ./index.html');
 }
+$_SESSION["id"] = $result["id"];
+//var_dump($_SESSION);
+header('Location: ./FeedPlaceholder.html');
