@@ -26,6 +26,46 @@
         </svg>
     </a>
     <script src="Scripts/like.js"> </script>
+    <?php
+
+include_once "./database.php";
+// show users from database
+$users = $database->query("SELECT * FROM users");
+
+//add users to list
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password2 = $_POST['password2'];
+    $agree = $_POST['agree'];
+    $database->query("INSERT INTO users (username, email, password, password2, agree) VALUES ('$username', '$email', '$password', '$password2', '$agree')");
+    header("Location: test.php");
+}   
+//echo user from list in div
+foreach ($users as $user) {
+    echo "<div class='user'>";
+    echo "<h3>" . $user['username'] . "</h3>";
+    echo "<p>" . $user['mail'] . "</p>";
+    echo "<p>" . $user['pwd'] . "</p>";
+    echo "<p>" . $user['id'] . "</p>";
+    echo "</div>";
+}
+foreach ($users as $user) {
+    echo $user['username'] . "<br>";
+    echo $user['mail'] . "<br>";
+    echo $user['pwd'] . "<br>";
+    echo $user['id'] . "<br>";
+    echo "<br>";
+}   
+echo $users[0]['username'];
+
+//show users from database
+$users = $database->query("SELECT * FROM users");
+
+?>
+<!-- create container -->
+
 </body>
 
 </html>

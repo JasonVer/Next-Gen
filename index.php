@@ -2,12 +2,13 @@
 <head>  
     <title>User Login</title>  
     <link rel = "stylesheet" type = "text/css" href = "Css/style.css">
-    <link rel = "stylesheet" type = "text/css" href = "Css/captcha.css">  
-    
-    <link rel="stylesheet" type="text/css" href="Css/navbar.css" media=”screen” />
-    <script src="Scripts/navbar.js"></script> 
+    <link rel = "stylesheet" type = "text/css" href = "Css/captcha.css">   
 </head>  
 <body>  
+    <!-- include navbar -->
+    <?php
+    include("./navbar.html");
+    ?>
     <div id = "frm">  
         <h1>Welcome!</h1>  
         <form name="f1" method="POST" action="login.php" >  
@@ -40,7 +41,9 @@
             </form>
             <div class="status-text"></div>
           </div>
-
+          <?php
+          $_SESSION["username"] = "gay";
+          ?>
     </div>  
     
 
