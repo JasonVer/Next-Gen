@@ -24,6 +24,9 @@
     <title>test page</title>
 </head>
 <body>
+    <?php
+include("./navbar.html");
+?>
 <main>
     
     <form action="register.php" method="post" id="demo-form">
@@ -70,6 +73,8 @@
         <button type="submit">Register</button>
         <footer>Already a member? <a href="index.html">Login here</a></footer>
     </form>
+    
+
     
 </main>
 </body>
