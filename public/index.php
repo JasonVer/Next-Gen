@@ -1,3 +1,19 @@
+<?php
+include_once '../include/users.php';
+
+if($_POST){
+  $username=$_POST["username"];
+  $password=$_POST["password"];
+  
+  $loggedin=login($username,$password);
+  if ($loggedin){
+    session_start();
+    $_SESSION["id"]=$loggedin["id"];
+    header('Location: ./FeedPlaceholder.html');
+  }
+}
+?>
+
 <html>  
 <head>  
     <title>User Login</title>  
@@ -10,7 +26,7 @@
 <body>  
     <div id = "frm">  
         <h1>Welcome!</h1>  
-        <form name="f1" method="POST" action="login.php" >  
+        <form name="f1" method="POST" action="index.php" >  
             <p>  
                 <label> UserName: </label>  
                 <input type = "text" id ="username" name  = "username" />  
@@ -20,7 +36,7 @@
                 <input type = "password" id ="password" name  = "password" />  
             </p>  
             <p>     
-                <a href="test.php">Register here</a>
+                <a href="register.php">Register here</a>
                 <input type =  "submit" id = "btn" value = "Login" />  
             </p>  
         </form>  

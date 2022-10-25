@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "./database.php";
+include_once INCLUDE_PATH ."database.php";
 
 $username=$_SESSION["id"];//$_POST["username"];
 $msg=$_POST["description"];

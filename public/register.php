@@ -1,3 +1,17 @@
+<?php
+include_once '../include/users.php';
+
+if($_POST){
+    $email=$_POST["email"];
+    $username=$_POST["username"];
+    $password=$_POST["password"];
+    $password2=$_POST["password2"];
+    $agree=$_POST["agree"];
+    if(register($username,$password,$password2,$email,$agree)){
+        header('Location: ./index.php');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
