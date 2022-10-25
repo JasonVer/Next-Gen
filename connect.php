@@ -1,8 +1,16 @@
 <?php
+//for local use
 $servername = "127.0.0.1";
 $username = "root";
 $password = "root";
 $dbname = "iamsocial";
+
+//for server use
+//$servername = "com-linweb710.srv.combell-ops.net:3306";
+//$username = "ID388827_iamsocial";
+//$password = "wachtwoordimslab2022";
+//$dbname = "ID388827_iamsocial";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

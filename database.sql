@@ -33,3 +33,5 @@ CREATE TABLE comments(
 );
 
 
+
+CREATE VIEW v_user_post AS SELECT p.*, u.username FROM posts as p JOIN users as u WHERE u.id = p.userid;
