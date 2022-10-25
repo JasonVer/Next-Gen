@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.phptutorial.net/app/css/style.css">
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lfi3WkiAAAAAJ6gOLZWHGiwhnD6Whz8UAamD1oT"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf8Pq4iAAAAAKv53YUm-Li3wt0x5oGzx38KCYKe"></script>
+    <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6Lf8Pq4iAAAAAKv53YUm-Li3wt0x5oGzx38KCYKe', {action: 'submit'}).then(function(token) {
+              document.getElementByID("demo-form").value=token;
+          });
+        });
+      }
+  </script>
+    <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
     <title>test page</title>
 </head>
 <body>
 <main>
     
-    <form action="register.php" method="post">
+    <form action="register.php" method="post" id="demo-form">
         <h1>Sign Up</h1>
         <div>
             <label for="username">Username:</label>
@@ -41,27 +56,21 @@
         </div>
         <div>
         
-        <input type="submit" />
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-   <script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
- </script>
-        </div>
-        <div>
-        <button type="submit"
-        class="g-recaptcha" 
-        data-sitekey="6Lfi3WkiAAAAAJ6gOLZWHGiwhnD6Whz8UAamD1oT" 
+        <button class="g-recaptcha" 
+        data-sitekey="6Lf8Pq4iAAAAAKv53YUm-Li3wt0x5oGzx38KCYKe" 
         data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+        data-action='submit'>Register - C</button>
         </div>
+        <script>
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6Lf8Pq4iAAAAAKv53YUm-Li3wt0x5oGzx38KCYKe', {action: 'submit'}).then(function(token) {
+              document.getElementByID("demo-form").value=token;
+          });
+    </script>
         <button type="submit">Register</button>
         <footer>Already a member? <a href="index.html">Login here</a></footer>
-        <?php
-                    include("captcha.php")
-                ?>
     </form>
+    
 </main>
 </body>
 </html>

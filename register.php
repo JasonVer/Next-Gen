@@ -7,7 +7,7 @@ $password2=$_POST["password2"];
 $agree=$_POST["agree"];
 
 if ($agree != "yes"){
-    header('Location: ./test.php');
+    header('Location: ./FeedPlaceholder.html');
 
 
 }
@@ -27,4 +27,4 @@ if ($count[0] != "0")
 $hashedpassword = md5($password);
 $database->query("INSERT INTO users(username, mail, pwd) VALUES ('".$username."', '".$email."', '".$hashedpassword."');");
 
-header('Location: ./index.html');
+header('Location: ./FeedPlaceholder.html');
