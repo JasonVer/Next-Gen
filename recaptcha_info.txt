@@ -1,0 +1,5 @@
+client side key: 6Lf8Pq4iAAAAAKv53YUm-Li3wt0x5oGzx38KCYKe
+https://developers.google.com/recaptcha/docs/v3
+
+server side key(secret): 6Lf8Pq4iAAAAAL6NzarSKBl04Rk6fJklLQ9SC-xu
+https://developers.google.com/recaptcha/docs/verify
