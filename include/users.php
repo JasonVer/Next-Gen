@@ -9,8 +9,7 @@ function login($username,$password){
     return $result;
 }
 
-function register($username,$password,$password2,$email,$agree){
-    if($agree!="yes") return false;
+function register($username,$password,$password2,$email){
     if($password!=$password2) return false;
     $count_check = database->query("SELECT COUNT(*) AS c FROM users WHERE username ='" . $username ."' OR mail='".$email."'");
     $count = $count_check->fetch_row();

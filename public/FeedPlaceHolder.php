@@ -28,9 +28,9 @@
     <script src="Scripts/like.js"> </script>
     <?php
 
-include_once "./database.php";
+include_once "../include/database.php";
 // show users from database
-$users = $database->query("SELECT * FROM users");
+$users = $db->query("SELECT * FROM users");
 
 //add users to list
 if (isset($_POST['submit'])) {
@@ -58,10 +58,10 @@ foreach ($users as $user) {
     echo $user['id'] . "<br>";
     echo "<br>";
 }   
-echo $users[0]['username'];
+//echo $users[0]['username'];
 
 //show users from database
-$users = $database->query("SELECT * FROM users");
+$users = $db->query("SELECT * FROM users");
 
 ?>
 <!-- create container -->

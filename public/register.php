@@ -6,9 +6,9 @@ if($_POST){
     $username=$_POST["username"];
     $password=$_POST["password"];
     $password2=$_POST["password2"];
-    $agree=$_POST["agree"];
-    if(register($username,$password,$password2,$email,$agree)){
-        header('Location: ./index.php');
+    //$agree=$_POST["agree"];
+    if(register($username,$password,$password2,$email)){
+        header('Location: ../index.php');
     }
 }
 ?>
@@ -40,10 +40,11 @@ if($_POST){
 <body>
     <?php
 include("./navbar.html");
+header('Location: ../index.php');
 ?>
 <main>
     
-    <form action="register.php" method="post" id="demo-form">
+    <!-- <form action="register.php" method="post" id="demo-form">
         <h1>Sign Up</h1>
         <div>
             <label for="username">Username:</label>
@@ -73,10 +74,7 @@ include("./navbar.html");
         </div>
         <div>
         
-        <button class="g-recaptcha" 
-        data-sitekey="6Lf8Pq4iAAAAAKv53YUm-Li3wt0x5oGzx38KCYKe" 
-        data-callback='onSubmit' 
-        data-action='submit'>Register - C</button>
+
         </div>
         <script>
         grecaptcha.ready(function() {
@@ -87,7 +85,7 @@ include("./navbar.html");
         <button type="submit">Register</button>
         <footer>Already a member? <a href="index.html">Login here</a></footer>
     </form>
-    
+        -->
 
     
 </main>
