@@ -6,8 +6,8 @@ if($_POST){
     $username=$_POST["username"];
     $password=$_POST["password"];
     $password2=$_POST["password2"];
-    //$agree=$_POST["agree"];
-    if(register($username,$password,$password2,$email,/*$agree*/)){
+    $agree=$_POST["agree"];
+    if(register($username,$password,$password2,$email,$agree)){
         header('Location: ./index.php');
     }
 }
@@ -62,12 +62,12 @@ if($_POST){
 	              <span class="icon fa fa-lock"></span>
 	            </div>
                 <div>
-            <!-- <label for="agree">
+             <label for="agree">
                 <input type="checkbox" name="agree" id="agree" value="yes"/> I agree
                 with the
                 <a href="#" title="term of services">term of services</a>
                 
-            </label> -->
+            </label> 
             
         </div>
 	            <div class="form-group">
