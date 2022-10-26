@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -30,9 +31,9 @@
 		<p>Don't have an account? <a href="./public/signup.php">Create Your Account</a> it takes less than a minute</p>
         <form name="f1" action="./public/FeedPlaceHolder.php" method="POST">
 		<div class="inputs">
-			<input type="text" placeholder="user name" id ="username" name  = "username">
+			<input type="text" placeholder="user name" id ="username" name  = "username" required>
 			<br>
-			<input type="password" placeholder="password" id ="password" name  = "password">
+			<input type="password" placeholder="password" id ="password" name  = "password" required>
 		</div>
 			
 			<br><br>

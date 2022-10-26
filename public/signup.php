@@ -41,23 +41,23 @@ if($_POST){
 						<form action="register.php" class="signup-form" method="post" id="demo-form">
 		      		<div class="form-group mb-3">
 		      			<label class="label" for="username">Username</label>
-		      			<input type="text" class="form-control" placeholder="Friendly Neighborhood Spider-Man" name="username" id="username">
+		      			<input type="text" class="form-control" placeholder="Friendly Neighborhood Spider-Man" name="username" id="username" required>
 		      			<span class="icon fa fa-user-o"></span>
 		      		</div>
 		      		<div class="form-group mb-3">
 		      			<label class="label" for="email">Email Address</label>
-		      			<input type="text" class="form-control" placeholder="peterparker@spidey.com" name="email" id="email">
+		      			<input type="text" class="form-control" placeholder="peterparker@spidey.com" name="email" id="email" required>
 		      			<span class="icon fa fa-paper-plane-o"></span>
 		      		</div>
 	            <div class="form-group mb-3">
 	            	<label class="label" for="password">Password</label>
-	              <input id="password" type="password" class="form-control" placeholder="P@$$w0rd" name="password" id="password">
+	              <input id="password" type="password" class="form-control" placeholder="P@$$w0rd" name="password" id="password" required>
 	              <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 	              <span class="icon fa fa-lock"></span>
 	            </div>
 	            <div class="form-group mb-3">
 	            	<label class="label" for="password">Password</label>
-	              <input id="password-confirm" type="password" class="form-control" placeholder="P@$$w0rd" name="password2" id="password2">
+	              <input id="password-confirm" type="password" class="form-control" placeholder="P@$$w0rd" name="password2" id="password2" required>
 	              <span toggle="#password-confirm" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 	              <span class="icon fa fa-lock"></span>
 	            </div>
