@@ -17,7 +17,7 @@
 		<div class="overlay">
 		<h1>Hello fellow IMS user</h1>
 		<p>“Distracted from distraction by distraction” <br>
-			<a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2Fe37bfd867b7292e219c745ff399449db%2Ftenor.gif%3Fitemid%3D12990580&f=1&nofb=1&ipt=9c8ac37ebb4db2f89dcabbcff5db416f51cc5a210adfe797309f635a9f7a8497&ipo=images" target="_blank" rel="noopener" style="text-decoration:none;">.</a>
+			<a href="easter.html" target="_blank" rel="noopener" style="text-decoration:none;">.</a>
 			― T.S. Eliot </p>
 		<span>
 			<p>Your privacy is our concern!</p>
