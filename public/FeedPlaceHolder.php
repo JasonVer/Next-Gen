@@ -68,18 +68,21 @@ $users = $db->query("SELECT * FROM users");
     echo $user['agree'] . "<br>";
 } */
 // select everything from posts
-$posts = $db->query("SELECT * FROM posts"); 
+/* $posts = $db->query("SELECT * FROM posts"); 
 // select name from users where id from posts = user_id    
-foreach ($posts as $post) {
+ foreach ($posts as $post) {
     $user = $db->query("SELECT username FROM users WHERE id = " . $post['userid'])->fetch();
     echo $user['name'] . "<br>";
     echo $post['title'] . "<br>";
     echo $post['content'] . "<br>";
     echo $post['created_at'] . "<br>";
-    echo $post['updated_at'] . "<br>";
-}
+    echo $post['updated_at'] . "<br>"; 
+    // print attributes of $post
+     
+}  */
+
 //echo user from list in div
-foreach ($users as $user) {
+/* foreach ($users as $user) {
     echo "<li class='list-group-item'>";
     echo "<h3>" . $user['username'] . "</h3>";
     echo "<p>" . $user['mail'] . "</p>";
@@ -93,13 +96,36 @@ foreach ($users as $user) {
     </svg>
        </a>";
     echo "</li>";
-}
+} */
 
 //echo $users[0]['username'];
-
+ //show each key and value of posts
+ /* foreach($post as $key => $value){
+    //show each key and value of users
+    foreach($users as $user){
+        //if post userid is equal to user id
+        if($post['userid'] == $user['id']){
+            //show username
+            echo $user['username'];
+        }
+    }
+} */
 //show users from database
 $users = $db->query("SELECT * FROM users");
+//show everythinh from post
+$posts = $db->query("SELECT * FROM posts");
+foreach($posts as $post){
+   
 
+    foreach ($post as $key => $value) {
+    echo "<li class='list-group-item'>";
+    echo "<h3>" . $post['msg'] . "</h3>";
+    echo "<img src='" . $post['pic'] . " 'width='30%'>";
+   /*  echo "<p>" . $user['pwd'] . "</p>";
+    echo "<p>" . $user['id'] . "</p>"; */
+    echo "</li>";
+    }  
+}
 ?>
 </ul>
 <!-- create container -->
