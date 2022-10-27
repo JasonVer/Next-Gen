@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./Css/acount.css">
 </head>
+	<?php
+	include './navbar.html';
+	?>
 <body>
 	<section class="py-5 my-5">
 		<div class="container">

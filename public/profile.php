@@ -2,7 +2,11 @@
     <head>
         <link rel="stylesheet" href="./Css/profile.css">
     </head>
+	
     <body>
+	<?php
+		include "./navbar.html"
+		?>
     <article class="cssui-usercard">
 		<div class="cssui-usercard__body">
 			<header class="cssui-usercard__header">
